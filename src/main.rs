@@ -160,7 +160,7 @@ mod tests {
     fn dog_cycle_test() {
         {
             println!("nomal cycle");
-            let mut dog = Dog::new();
+            let mut dog = Dog::new(String::from("taro"));
             assert_eq!(dog.is_alive(), false);
             assert_eq!(dog.born(), true);
             assert_eq!(dog.is_alive(), true);
@@ -169,14 +169,14 @@ mod tests {
         }
         {
             println!("die before born");
-            let mut dog = Dog::new();
+            let mut dog = Dog::new(String::from("taro"));
             assert_eq!(dog.is_alive(), false);
             assert_eq!(dog.die(), false);
             assert_eq!(dog.is_alive(), false);
         }
         {
             println!("born twice");
-            let mut dog = Dog::new();
+            let mut dog = Dog::new(String::from("taro"));
             assert_eq!(dog.is_alive(), false);
             assert_eq!(dog.born(), true);
             assert_eq!(dog.born(), false);
@@ -184,7 +184,7 @@ mod tests {
         }
         {
             println!("die twice");
-            let mut dog = Dog::new();
+            let mut dog = Dog::new(String::from("taro"));
             assert_eq!(dog.is_alive(), false);
             assert_eq!(dog.born(), true);
             assert_eq!(dog.die(), true);
@@ -196,7 +196,7 @@ mod tests {
     fn cat_cycle_test() {
         {
             println!("nomal cycle");
-            let mut cat = Cat::new();
+            let mut cat = Cat::new(String::from("taro"));
             assert_eq!(cat.is_alive(), false);
             assert_eq!(cat.born(), true);
             assert_eq!(cat.is_alive(), true);
@@ -205,14 +205,14 @@ mod tests {
         }
         {
             println!("die before born");
-            let mut cat = Cat::new();
+            let mut cat = Cat::new(String::from("taro"));
             assert_eq!(cat.is_alive(), false);
             assert_eq!(cat.die(), false);
             assert_eq!(cat.is_alive(), false);
         }
         {
             println!("born twice");
-            let mut cat = Cat::new();
+            let mut cat = Cat::new(String::from("taro"));
             assert_eq!(cat.is_alive(), false);
             assert_eq!(cat.born(), true);
             assert_eq!(cat.born(), false);
@@ -220,7 +220,7 @@ mod tests {
         }
         {
             println!("die twice");
-            let mut cat = Cat::new();
+            let mut cat = Cat::new(String::from("taro"));
             assert_eq!(cat.is_alive(), false);
             assert_eq!(cat.born(), true);
             assert_eq!(cat.die(), true);
